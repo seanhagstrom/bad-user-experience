@@ -1,18 +1,30 @@
 let count = 0;
 const dodges = getRandomInt(1, 12);
+const encouragingMessages = [
+  'Oh, soooo close that time!',
+  "Don't give up! You can click that button!",
+  'Just keep trying',
+];
 
 /**DOM SELECTORS**/
 const root = document.querySelector('#root');
 const badButton = document.createElement('button');
+const message = document.createElement('p');
 badButton.innerText = 'Click To Start';
 root.appendChild(badButton);
+root.appendChild(message);
 
 /**EVENT LISTENERS**/
 badButton.addEventListener('mouseover', () => {
   if (count < dodges) {
     assignStyle();
+    message.innerText =
+      encouragingMessages[getRandomInt(0, encouragingMessages.length - 1)];
     count++;
   }
+});
+badButton.addEventListener('click', () => {
+  message.innerText = `Hurray it took you ${count} tries to click the button!`;
 });
 
 /**HELPER FUNCTIONS**/
