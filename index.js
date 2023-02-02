@@ -2,7 +2,11 @@ let count = 0;
 const dodges = getRandomInt(1, 12);
 
 /**DOM SELECTORS**/
-const badButton = document.querySelector('#but-why');
+const root = document.querySelector('#root');
+
+const badButton = document.createElement('button');
+badButton.innerText = 'Click To Start';
+root.appendChild(badButton);
 
 /**EVENT LISTENERS**/
 badButton.addEventListener('mouseover', () => {
