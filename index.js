@@ -1,15 +1,15 @@
 let count = 0;
-const dodges = getRandomInt(1, 12);
+const dodges = getRandomInt(5, 12);
 const encouragingMessages = [
   'Oh, soooo close that time!',
   "Don't give up! You can click that button!",
-  'Just keep trying',
+  'Just keep trying :)',
 ];
 
 /**DOM SELECTORS**/
 const root = document.querySelector('#root');
 const badButton = document.createElement('button');
-const message = document.createElement('p');
+const message = document.createElement('h1');
 badButton.innerText = 'Click To Start';
 root.appendChild(badButton);
 root.appendChild(message);
