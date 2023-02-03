@@ -48,8 +48,8 @@ function assignStyle() {
   const upOrDown = whichWay('y');
 
   const styleString = `position: relative;
-    ${leftOrRight}: ${getRandomInt(0, 45)}vw;
-    ${upOrDown}: ${getRandomInt(0, 45)}vh;`;
+    ${leftOrRight}: ${getRandomInt(0, 30)}vw;
+    ${upOrDown}: ${getRandomInt(0, 30)}vh;`;
 
   console.log(styleString);
   badButton.style = styleString;
